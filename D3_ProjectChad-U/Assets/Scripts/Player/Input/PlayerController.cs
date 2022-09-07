@@ -6,7 +6,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
-    private Vector3 playerVelocity;
     private bool _isGrounded;
 
     [SerializeField]
@@ -14,34 +13,28 @@ public class PlayerController : MonoBehaviour
     private float gravityValue = -9.81f;
 
     private InputManager inputManager;
+    private Transform cameraTransform;
 
     private void Start()
     {
         inputManager = InputManager.Instance;
         controller = GetComponent<CharacterController>();
+        cameraTransform = Camera.main.transform;
     }
 
     void Update()
     {
         _isGrounded = controller.isGrounded;
-        if (_isGrounded && playerVelocity.y < 0) 
-        {          
-            playerVelocity.y = 0f;
-        }
-
-        MovePlayer();
-        
+        MovePlayer();       
     }
 
     private void MovePlayer()
     {
         var input = inputManager.GetMovement();
         Vector3 move = new Vector3(input.x, 0f, input.y);
+        move = cameraTransform.right * move.x + cameraTransform.forward * move.z;
+        move.y = 0f;
+       
         controller.Move(move * Time.deltaTime * playerSpeed);
-
-        if (move != Vector3.zero)
-            gameObject.transform.forward = move;
-
-        controller.Move(playerVelocity * Time.deltaTime);
     }
 }
