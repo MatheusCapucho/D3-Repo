@@ -38,6 +38,7 @@ public class InputManager : MonoBehaviour
 
     public Vector2 GetMovement() => playerInput.Player.Movement.ReadValue<Vector2>();
     public Vector2 GetMouseDelta() => playerInput.Player.Look.ReadValue<Vector2>();
+    public Vector2 GetMousePosition() => playerInput.Player.MousePosition.ReadValue<Vector2>();
 
     #endregion
 
