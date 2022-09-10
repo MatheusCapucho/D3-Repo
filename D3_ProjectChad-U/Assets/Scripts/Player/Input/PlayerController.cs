@@ -26,15 +26,6 @@ public class PlayerController : MonoBehaviour
     {
         _isGrounded = controller.isGrounded;
         MovePlayer();
-        Rotate();
-
-    }
-
-    private void Rotate()
-    {
-        var look = inputManager.GetMouseDelta();
-
-        transform.rotation = Quaternion.Euler(look.x, look.y, 0f);
 
     }
 

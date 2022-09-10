@@ -26,6 +26,7 @@ public class CameraRaycast : MonoBehaviour
 
     void Update()
     {
+        transform.rotation = _cam.transform.rotation;
         var ray = new Ray(_cam.transform.position, _cam.transform.forward);
         Debug.DrawRay(ray.origin, ray.direction * rayDistance, Color.blue);
         RaycastHit hit;
