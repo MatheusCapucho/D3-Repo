@@ -31,7 +31,8 @@ public class Enemy : MonoBehaviour
         var states = new Dictionary<Type, BaseState>()
         {
             { typeof(SearchState), new SearchState(this) },
-            { typeof(ChaseState), new ChaseState(this) }
+            { typeof(ChaseState), new ChaseState(this) },
+            { typeof(KillNpcState), new KillNpcState(this)}
         };
 
         StateMachine.SetStates(states);
