@@ -6,15 +6,41 @@ using System;
 public class ChaseState : BaseState
 {
     private Enemy enemy;
+   
 
     public ChaseState(Enemy enemy) : base(enemy.gameObject)
     {
         this.enemy = enemy;
+      
     }
-
-    // Chase Logic, return typeof(nextState)
     public override Type Tick()
     {
-        return typeof(SearchState);
+        if (!PlayerInRange())
+            return typeof(SearchState);
+
+        if (AttackRange())
+        {
+
+        }
+
+        return typeof(ChaseState);
     }
+
+    private bool PlayerInRange()
+    {
+        var distance = Vector3.Distance(transform.position, enemy.Target.position);
+        if (distance < enemy.detectionRadius + 1f)
+            return true;
+
+        enemy.SetTarget(null);
+        return false;
+    }
+
+    private bool AttackRange()
+    {
+        return false;
+    }
+
+   
+
 }
