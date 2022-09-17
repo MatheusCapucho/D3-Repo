@@ -25,10 +25,11 @@ public class PauseMenu : MonoBehaviour
     }
     private void Next()
     {
-        if (SceneManager.sceneCount == 2)
+        int index = SceneManager.GetActiveScene().buildIndex;
+        if (SceneManager.GetActiveScene().buildIndex > 3)
             SceneManager.LoadScene(0);
         else
-            SceneManager.LoadScene(SceneManager.sceneCount + 1);
+            SceneManager.LoadScene(1+index);
 
     }
 }
