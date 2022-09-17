@@ -15,10 +15,20 @@ public class PauseMenu : MonoBehaviour
     {
         if (inputManager.RestartScene())
             Restart();
+        if (inputManager.NextScene())
+            Next();
     }
 
     private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    private void Next()
+    {
+        if (SceneManager.sceneCount == 2)
+            SceneManager.LoadScene(0);
+        else
+            SceneManager.LoadScene(SceneManager.sceneCount + 1);
+
     }
 }

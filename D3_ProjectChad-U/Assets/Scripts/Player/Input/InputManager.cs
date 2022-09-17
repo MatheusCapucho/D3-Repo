@@ -41,6 +41,7 @@ public class InputManager : MonoBehaviour
     public Vector2 GetMousePosition() => playerInput.Player.MousePosition.ReadValue<Vector2>();
     public bool MouseClicked() => playerInput.Player.Click.triggered;
     public bool RestartScene() => playerInput.Player.RestartScene.triggered;
+    public bool NextScene() => playerInput.Player.NextScene.triggered;
 
     #endregion
 

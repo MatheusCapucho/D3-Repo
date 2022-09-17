@@ -71,6 +71,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""NextScene"",
+                    ""type"": ""Button"",
+                    ""id"": ""76c684b0-bf3d-47a5-a7d6-e3e457a2af31"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -172,6 +181,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""RestartScene"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b8a153f-6c6e-4e52-8a56-f10479ec0154"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""NextScene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -185,6 +205,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_Click = m_Player.FindAction("Click", throwIfNotFound: true);
         m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
         m_Player_RestartScene = m_Player.FindAction("RestartScene", throwIfNotFound: true);
+        m_Player_NextScene = m_Player.FindAction("NextScene", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,6 +270,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Click;
     private readonly InputAction m_Player_MousePosition;
     private readonly InputAction m_Player_RestartScene;
+    private readonly InputAction m_Player_NextScene;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -258,6 +280,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Click => m_Wrapper.m_Player_Click;
         public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
         public InputAction @RestartScene => m_Wrapper.m_Player_RestartScene;
+        public InputAction @NextScene => m_Wrapper.m_Player_NextScene;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -282,6 +305,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @RestartScene.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartScene;
                 @RestartScene.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartScene;
                 @RestartScene.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRestartScene;
+                @NextScene.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextScene;
+                @NextScene.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextScene;
+                @NextScene.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextScene;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -301,6 +327,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @RestartScene.started += instance.OnRestartScene;
                 @RestartScene.performed += instance.OnRestartScene;
                 @RestartScene.canceled += instance.OnRestartScene;
+                @NextScene.started += instance.OnNextScene;
+                @NextScene.performed += instance.OnNextScene;
+                @NextScene.canceled += instance.OnNextScene;
             }
         }
     }
@@ -312,5 +341,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnClick(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
         void OnRestartScene(InputAction.CallbackContext context);
+        void OnNextScene(InputAction.CallbackContext context);
     }
 }
