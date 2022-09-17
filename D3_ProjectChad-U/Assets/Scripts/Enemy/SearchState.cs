@@ -7,6 +7,7 @@ public class SearchState : BaseState
 {
     private Enemy enemy;
     private GameObject[] classroom;
+    private bool[] visited = new bool[3];
     private ClassroomHolder classroomHolder;
 
     private int _currentTargetID = 0;
@@ -37,7 +38,22 @@ public class SearchState : BaseState
         int rng = UnityEngine.Random.Range(0, 3);
         _currentTargetID = rng;
         var target = classroom[_currentTargetID].transform;
+        if (visited[_currentTargetID] && !AllVisited())
+        {
+            SearchTarget();
+            return;
+        }
         enemy.SetTarget(target);
+    }
+
+    private bool AllVisited()
+    {
+        for (int i = 0; i < visited.Length; i++)
+            if (!visited[i])
+                return false;
+
+        return true;
+
     }
 
     private bool ReachedTarget()
@@ -45,6 +61,7 @@ public class SearchState : BaseState
         var distance = Vector3.Distance(transform.position, enemy.Target.position);
         if (distance < 0.8f)
         {
+            visited[_currentTargetID] = true;
             if (classroomHolder.GetNPC(_currentTargetID))
                 return true;
             else
