@@ -17,7 +17,7 @@ public class TriggerSprite : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            sprite.enabled = false;
+            sprite.enabled = !sprite.enabled;
         }
     }
 
@@ -25,7 +25,7 @@ public class TriggerSprite : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            sprite.enabled = true ;
+            sprite.enabled = !sprite.enabled;
         }
     }
 
