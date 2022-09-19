@@ -19,20 +19,11 @@ public class CameraButtonController : InteractableBase
 
     private bool isBeingPressed = false;
 
-    private void Awake()
-    {
-        //Aramazena o Renderer do objeto para ser trocado
-        cameraRenderer = securityCamScreen.GetComponent<Renderer>();
-    }
+
+
     protected override void Interact()
     {
-            index++;
-            if(index >= camTextureList.Count){
-                index = 0;
-            }
-
-            //Troca a imagem que está sendo renderizada pela próxima da lista
-            cameraRenderer.material.mainTexture = camTextureList[index];
+        changeCamera();
 
         //Talvez adicionar animação depois  
         if (!isBeingPressed)
@@ -45,6 +36,21 @@ public class CameraButtonController : InteractableBase
         
     }
 
+    private void changeCamera(){
+        index++;
+        if(index >= camTextureList.Count){
+           index = 0;
+        }
+
+        //Troca a imagem que está sendo renderizada pela próxima da lista
+        cameraRenderer.material.mainTexture = camTextureList[index];
+    }
+    
+    private void Awake()
+    {
+        //Aramazena o Renderer do objeto para ser trocado
+        cameraRenderer = securityCamScreen.GetComponent<Renderer>();
+    }
 
     // Start is called before the first frame update
     void Start()
