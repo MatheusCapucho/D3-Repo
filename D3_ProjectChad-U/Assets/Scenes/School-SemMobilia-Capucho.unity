@@ -40510,7 +40510,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 50
-  soundNames: []
+  soundNames:
+  - Breath
 --- !u!65 &1015261943
 BoxCollider:
   m_ObjectHideFlags: 0
