@@ -16,7 +16,7 @@ public class FootstepsPlayer : MonoBehaviour
         if(inputManager.GetMovement().magnitude < 0.1)
         {
             audioManager.StopSound("PlayerFootsteps");
-        } else
+        } else if (!audioManager.IsPlaying("PlayerFootsteps"))
         {
             audioManager.PlaySound("PlayerFootsteps");
         }

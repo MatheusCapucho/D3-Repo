@@ -55,7 +55,7 @@ MonoBehaviour:
     name: HelpMe
     clip: {fileID: 8300000, guid: 8bd043d5b3e25f0478274f5667d77aa3, type: 3}
     volume: 0.5
-    pitch: 0.5
+    pitch: 0.63
     loop: 0
   - audioSource: {fileID: 0}
     name: Breath
@@ -67,5 +67,35 @@ MonoBehaviour:
     name: PlayerFootsteps
     clip: {fileID: 8300000, guid: aea11eb607c886e49a5e5144ac3bc512, type: 3}
     volume: 0.5
+    pitch: 1
+    loop: 1
+  - audioSource: {fileID: 0}
+    name: Monster
+    clip: {fileID: 8300000, guid: dd9738969c611694086fcf6b6706a1ff, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+  - audioSource: {fileID: 0}
+    name: Horror
+    clip: {fileID: 8300000, guid: fc81b474e78b1af468968524c25c12da, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: Door
+    clip: {fileID: 8300000, guid: dd2629853b01ef04986d9b68b00eb024, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: Menu
+    clip: {fileID: 8300000, guid: d7b238b6f06c3bb43ada8453949f4ed1, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 1
+  - audioSource: {fileID: 0}
+    name: Atmosferic
+    clip: {fileID: 8300000, guid: d7b238b6f06c3bb43ada8453949f4ed1, type: 3}
+    volume: 0.7
     pitch: 1
     loop: 1

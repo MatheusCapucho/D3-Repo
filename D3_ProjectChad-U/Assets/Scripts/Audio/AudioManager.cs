@@ -78,7 +78,7 @@ public class AudioManager : MonoBehaviour
         return Array.Find(sounds, sound => sound.name == name);
     }
 
-    private bool IsPlaying(string name)
+    public bool IsPlaying(string name)
     {
         Sound s = FindSound(name);
         if (s == null)
@@ -88,5 +88,14 @@ public class AudioManager : MonoBehaviour
 
         return s.audioSource.isPlaying;       
     }
+
+    public void ChangeSoundVolume(string name, float volume)
+    {
+        Sound s = FindSound(name);
+
+        s.audioSource.volume = volume;
+
+    }
+
 
 }

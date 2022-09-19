@@ -8,6 +8,13 @@ public class PlaySound : MonoBehaviour
     [SerializeField]
     private string soundName;
 
+    private void Start()
+    {
+        if (soundName == "")
+            Destroy(this);
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
