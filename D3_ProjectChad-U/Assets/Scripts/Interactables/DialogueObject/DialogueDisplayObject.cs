@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 
 public class DialogueDisplayObject : InteractableBase
@@ -18,6 +19,7 @@ public class DialogueDisplayObject : InteractableBase
     private int index;
 
     private InputManager inputManager;
+    private Cinemachine camManager;
 
     //armazena o objeto de dialogo
     [SerializeField] private GameObject dialogBox;
@@ -45,13 +47,24 @@ public class DialogueDisplayObject : InteractableBase
         dialogBox.SetActive(true);
         StartCoroutine(TypeLine());
         Debug.Log("passou 3");
-        Invoke("endDialogue",dialogueTime);
+        Time.timeScale = 0;
+        inputManager.enabled = false;
+        StartCoroutine(endDialogueDelay(endDialogue));
+        
         
         
     }
 
-    public void endDialogue()
+    public IEnumerator endDialogueDelay(UnityAction action)
     {
+        yield return new WaitForSecondsRealtime(dialogueTime);
+        action.Invoke();
+        yield break;
+    }
+
+    public void endDialogue(){
+        Time.timeScale = 1;
+        inputManager.enabled = true;
         dialogBox.SetActive(false);
         activeDialogue = false;
     }
@@ -62,7 +75,7 @@ public class DialogueDisplayObject : InteractableBase
         foreach (char c in sentence.ToCharArray())
         {
             textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            yield return new  WaitForSecondsRealtime(textSpeed);
         }
         
     }
@@ -73,7 +86,9 @@ public class DialogueDisplayObject : InteractableBase
     void Start()
     {
         inputManager = InputManager.Instance;
+        camManager = Cinemachine.Instance;
         dialogBox = GameObject.Find("DialogBox");
+        
         dialogBox.SetActive(false);  
     }
 
