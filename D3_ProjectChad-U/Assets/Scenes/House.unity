@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43882105, g: 0.4869991, b: 0.5672648, a: 1}
+  m_IndirectSpecularColor: {r: 0.43882057, g: 0.48699844, b: 0.5672642, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1140,7 +1140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &467385913
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19128,7 +19128,7 @@ GameObject:
   - component: {fileID: 8317993732359617642}
   - component: {fileID: 2555608148315920138}
   - component: {fileID: 8317993732359617643}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Book_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19499,7 +19499,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -3714202461357514168, guid: 6dd52b4e77b0cf5459d7d23501b97096, type: 3}
+  m_Mesh: {fileID: -66333826979096818, guid: 076fdd202f386614f9479f0a8ff7ecdb, type: 3}
 --- !u!4 &8342323960216953976
 Transform:
   m_ObjectHideFlags: 0
@@ -20234,7 +20234,7 @@ MonoBehaviour:
   textComponent: {fileID: 1016676606}
   sentence: Sou uma cadeira
   textSpeed: 0.1
-  dialogBox: {fileID: 0}
+  dialogBox: {fileID: 467385912}
   dialogueTime: 2
 --- !u!4 &9069199588838885265
 Transform:
