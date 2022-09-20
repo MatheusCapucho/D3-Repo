@@ -12,11 +12,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SandBox.unity
     guid: 524ca828f0ad5474fbe64cd1323f3fe8
   - enabled: 1
-    path: Assets/Scenes/CamSystem.unity
-    guid: 0f486d07f64793f429abcb405eb06943
-  - enabled: 1
     path: Assets/Scenes/House.unity
     guid: 6f08e8ab9f01d684a88e2f84330978d2
+  - enabled: 1
+    path: Assets/Scenes/CamSystem.unity
+    guid: 0f486d07f64793f429abcb405eb06943
   - enabled: 1
     path: Assets/Scenes/MenuConfig.unity
     guid: 95b7670526c294145903347cd28d9180
