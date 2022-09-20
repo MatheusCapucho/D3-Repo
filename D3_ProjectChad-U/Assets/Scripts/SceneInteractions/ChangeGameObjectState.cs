@@ -2,24 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TriggerSprite : MonoBehaviour
+public class ChangeGameObjectState : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer sprite;
+    [SerializeField]
+    private GameObject changeGameObject;
 
+    [SerializeField]
+    private bool active = false;
 
     private void Start()
     {
-        if (sprite == null)
+        if (changeGameObject == null)
             Destroy(this);
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            sprite.enabled = !sprite.enabled;
+            changeGameObject.SetActive(active);
             Destroy(this, 0.1f);
         }
     }
-
 }
