@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43882057, g: 0.48699844, b: 0.5672642, a: 1}
+  m_IndirectSpecularColor: {r: 0.43882105, g: 0.4869991, b: 0.5672648, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1569,7 +1569,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &599279102
 MonoBehaviour:
@@ -2178,7 +2178,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -4069051703922272875, guid: 2775e51d6fccd134f83ca977e4994c42, type: 3}
+  m_Mesh: {fileID: -4069051703922272875, guid: 48eb561e4e301ad46a40f8364ba29349, type: 3}
 --- !u!1 &958422261
 GameObject:
   m_ObjectHideFlags: 3
@@ -2422,8 +2422,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3100,7 +3100,7 @@ RectTransform:
   - {fileID: 1184229904}
   - {fileID: 467385913}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3207,7 +3207,7 @@ Transform:
   m_Children:
   - {fileID: 958422262}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1241725945
 PrefabInstance:
@@ -3222,7 +3222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7979102478759322742, guid: fe6b57829f42b3b469bb3eceb5bdb17b, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7979102478759322742, guid: fe6b57829f42b3b469bb3eceb5bdb17b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3718,7 +3718,7 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5191339274448896029, guid: 17482f91ee59d6948a8d1e2a132598f9, type: 3}
+  m_Mesh: {fileID: -5191339274448896029, guid: 08ecba5149aee9245a0479148882cd6e, type: 3}
 --- !u!64 &1505474919
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4033,6 +4033,87 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2137011502335484272, guid: 7a661731330087242baaec043a2cf715, type: 3}
+--- !u!1001 &1567458504
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4457709067922980840, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649134669103371742, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: sounds.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649134669103371742, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: sounds.Array.data[9].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: cbea941dfc4809147bb5604d94a50cdb, type: 3}
+    - target: {fileID: 4649134669103371742, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: sounds.Array.data[9].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649134669103371742, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: sounds.Array.data[9].name
+      value: Radio
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649134669103371742, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: sounds.Array.data[9].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649134669103371742, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: sounds.Array.data[9].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 335.3818
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.537216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 173.02887
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348831826449382422, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd1d08440b4deae41bfb4a6142f65e2d, type: 3}
 --- !u!64 &1578108357
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4388,7 +4469,7 @@ Transform:
   - {fileID: 1525805046}
   - {fileID: 374183668}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1716453170
 MeshCollider:
@@ -4446,6 +4527,83 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8774980583847936708, guid: 262ac962ee4e6f04a86552869dbb8e63, type: 3}
+--- !u!1001 &1772290383
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3443967106304908173, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: soundName
+      value: Radio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908208, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_Name
+      value: Susto_Radio
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 74.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0896006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 127.688
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908210, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5093441
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908210, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_Size.z
+      value: 0.80706406
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908210, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_Center.x
+      value: -0.24532795
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908210, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_Center.z
+      value: 0.09646797
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
 --- !u!64 &1773967575
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4629,7 +4787,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 73.51, y: 0, z: 0}
 --- !u!64 &1906899983
 MeshCollider:
@@ -5227,7 +5385,8 @@ GameObject:
   - component: {fileID: 4945366527674307402}
   - component: {fileID: 5807726609514578294}
   - component: {fileID: 7331565427489773291}
-  m_Layer: 0
+  - component: {fileID: 7331565427489773292}
+  m_Layer: 8
   m_Name: Vaso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7869,7 +8028,8 @@ GameObject:
   - component: {fileID: 3469287838161383106}
   - component: {fileID: 1711813854434023944}
   - component: {fileID: 1501775503}
-  m_Layer: 0
+  - component: {fileID: 3469287838161383107}
+  m_Layer: 8
   m_Name: planks_double_door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13444,7 +13604,7 @@ Transform:
   - {fileID: 7902888507425773932}
   - {fileID: 5984507660944380811}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!4 &1791225254801964839
 Transform:
@@ -13586,7 +13746,8 @@ GameObject:
   - component: {fileID: 70713085899869334}
   - component: {fileID: 960443785245851852}
   - component: {fileID: 4560641898729117701}
-  m_Layer: 0
+  - component: {fileID: 4560641898729117702}
+  m_Layer: 8
   m_Name: Radio_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14181,7 +14342,7 @@ Transform:
   - {fileID: 8754156086948646852}
   - {fileID: 3910198611620897656}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2623262216084351861
 Transform:
@@ -14590,7 +14751,7 @@ Transform:
   - {fileID: 231941754}
   - {fileID: 1562059263}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &3082419961708742396
 Transform:
@@ -15469,6 +15630,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148509604829}
   m_Mesh: {fileID: -5191339274448896029, guid: 83ab8d58aa75f424e936a9420196167b, type: 3}
+--- !u!114 &3469287838161383107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148509604829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576ef2c2c23b8ac4b8ceb9cd3ff09373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1016676606}
+  sentence: 'Thank god the door to Chadley''s room was
+
+    sealed. The storm was
+    better than him and his weird friends tormenting me.'
+  textSpeed: 0.04
+  dialogBox: {fileID: 467385912}
+  dialogueTime: 5
 --- !u!33 &3469287838170894743
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -16006,7 +16187,7 @@ Transform:
   - {fileID: 5372755057615463579}
   - {fileID: 8235833958469454449}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3962288849258499863
 MeshFilter:
@@ -16078,7 +16259,8 @@ GameObject:
   - component: {fileID: 7526997483187745598}
   - component: {fileID: 660317292468477887}
   - component: {fileID: 7526997483187745599}
-  m_Layer: 0
+  - component: {fileID: 7526997483187745600}
+  m_Layer: 8
   m_Name: Washing_machine_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16410,7 +16592,24 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -8356731279736162888, guid: 6dd52b4e77b0cf5459d7d23501b97096, type: 3}
+  m_Mesh: {fileID: 4762477281045989054, guid: 85c41c987c124e44384bb184c6dba076, type: 3}
+--- !u!114 &4560641898729117702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090316142038999241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576ef2c2c23b8ac4b8ceb9cd3ff09373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1016676606}
+  sentence: 'This radio is broken for months, I always forget to take it to the repairman. '
+  textSpeed: 0.04
+  dialogBox: {fileID: 467385912}
+  dialogueTime: 5
 --- !u!23 &4566020442167406247
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17212,7 +17411,8 @@ GameObject:
   - component: {fileID: 4686384413658024340}
   - component: {fileID: 2407085267711297045}
   - component: {fileID: 8235833958469454450}
-  m_Layer: 0
+  - component: {fileID: 8235833958469454451}
+  m_Layer: 8
   m_Name: Watering_can_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18487,7 +18687,7 @@ GameObject:
   - component: {fileID: 7285937194445677626}
   m_Layer: 3
   m_Name: PlayerBase
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18536,7 +18736,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &7311734767382448548
 Transform:
@@ -18596,6 +18796,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8476567016535443079, guid: 5491114e544f10a43801f133a3075f0e, type: 3}
+--- !u!114 &7331565427489773292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464837216925918724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576ef2c2c23b8ac4b8ceb9cd3ff09373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1016676606}
+  sentence: I haven't seen a proper sink since Chadley broke the last one.
+  textSpeed: 0
+  dialogBox: {fileID: 467385912}
+  dialogueTime: 0
 --- !u!1 &7352244050330064741
 GameObject:
   m_ObjectHideFlags: 0
@@ -18710,7 +18927,8 @@ GameObject:
   - component: {fileID: 1414661655962621558}
   - component: {fileID: 8645172876617508706}
   - component: {fileID: 8645172876617508707}
-  m_Layer: 0
+  - component: {fileID: 8645172876617508708}
+  m_Layer: 8
   m_Name: TV_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18805,6 +19023,30 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8385078600267347573, guid: e5758e76a256c9e4ba5e149f6706629b, type: 3}
+--- !u!114 &7526997483187745600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4155144105440816003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576ef2c2c23b8ac4b8ceb9cd3ff09373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1016676606}
+  sentence: 'That noise was the radio?!
+
+    This doesn''t make any sense!
+
+    At
+    least the machine seems fine.
+
+    I should go to the school now.'
+  textSpeed: 0.04
+  dialogBox: {fileID: 467385912}
+  dialogueTime: 5
 --- !u!1 &7557358304680944111
 GameObject:
   m_ObjectHideFlags: 0
@@ -19379,6 +19621,25 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5922008253206077884, guid: e5758e76a256c9e4ba5e149f6706629b, type: 3}
+--- !u!114 &8235833958469454451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5804767393202711907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576ef2c2c23b8ac4b8ceb9cd3ff09373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1016676606}
+  sentence: 'A bath would be fine, but I need to hurry.
+
+'
+  textSpeed: 0.04
+  dialogBox: {fileID: 467385912}
+  dialogueTime: 5
 --- !u!23 &8250389421238749485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19721,7 +19982,8 @@ GameObject:
   - component: {fileID: 7125543336941415694}
   - component: {fileID: 7936676084717754171}
   - component: {fileID: 8501606855116760109}
-  m_Layer: 0
+  - component: {fileID: 8501606855116760110}
+  m_Layer: 8
   m_Name: Stove_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19741,7 +20003,24 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 7114269686165675240, guid: 5491114e544f10a43801f133a3075f0e, type: 3}
+  m_Mesh: {fileID: 7114269686165675240, guid: 8f2d929695f3ac448a01252030deb552, type: 3}
+--- !u!114 &8501606855116760110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501606855116760108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576ef2c2c23b8ac4b8ceb9cd3ff09373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1016676606}
+  sentence: I can eat at my job.
+  textSpeed: 0.04
+  dialogBox: {fileID: 467385912}
+  dialogueTime: 5
 --- !u!4 &8501794995312779786
 Transform:
   m_ObjectHideFlags: 0
@@ -19962,7 +20241,24 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -3016817369797681858, guid: 6dd52b4e77b0cf5459d7d23501b97096, type: 3}
+  m_Mesh: {fileID: -3016817369797681858, guid: 85c41c987c124e44384bb184c6dba076, type: 3}
+--- !u!114 &8645172876617508708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7439943990196469877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576ef2c2c23b8ac4b8ceb9cd3ff09373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 1016676606}
+  sentence: The old TV has been out of signal since yesterday's storm.
+  textSpeed: 0.04
+  dialogBox: {fileID: 467385912}
+  dialogueTime: 5
 --- !u!23 &8649386071961012656
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20232,10 +20528,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1016676606}
-  sentence: Sou uma cadeira
-  textSpeed: 0.1
+  sentence: The only decent chair in the house, I used to sit in it to read some
+    books or listen to the news on the radio.
+  textSpeed: 0.04
   dialogBox: {fileID: 467385912}
-  dialogueTime: 2
+  dialogueTime: 5
 --- !u!4 &9069199588838885265
 Transform:
   m_ObjectHideFlags: 0
@@ -20259,7 +20556,7 @@ Transform:
   - {fileID: 3519987682056342236}
   - {fileID: 7331565427489773290}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9097855263582058458
 MeshFilter:
