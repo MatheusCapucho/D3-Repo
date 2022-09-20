@@ -12,7 +12,7 @@ public class DialogueDisplayObject : InteractableBase
     [TextArea(5,10)] [SerializeField] private string sentence;
 
     //define a velocidade em que o texto é digitado na tela
-    [SerializeField] private float textSpeed;
+    [SerializeField] private float textSpeed = 0.04f;
 
     //variavel para navegar
     private int index;
@@ -23,7 +23,7 @@ public class DialogueDisplayObject : InteractableBase
     [SerializeField] private GameObject dialogBox;
 
     //armazena o objeto de dialogo
-    [SerializeField] private float dialogueTime;
+    [SerializeField] private float dialogueTime = 5f;
 
     private bool activeDialogue = false;
 
@@ -72,7 +72,18 @@ public class DialogueDisplayObject : InteractableBase
     // Start is called before the first frame update
     void Start()
     {
+        if (sentence == string.Empty)
+            Destroy(this);
         inputManager = InputManager.Instance;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StartDialogue();
+            Destroy(this, dialogueTime + 0.2f);
+        }
     }
 
 

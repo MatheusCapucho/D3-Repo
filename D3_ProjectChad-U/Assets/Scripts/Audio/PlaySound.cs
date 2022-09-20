@@ -18,6 +18,9 @@ public class PlaySound : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             AudioManager.instance.PlaySound(soundName);
+            Destroy(this, 0.1f);
+        }
     }
 }

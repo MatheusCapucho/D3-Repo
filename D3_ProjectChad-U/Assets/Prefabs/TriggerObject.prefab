@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3443967106304908210}
   - component: {fileID: 3443967106304908173}
   - component: {fileID: 3443967106304908174}
+  - component: {fileID: 8940664975644775376}
+  - component: {fileID: 8917599994250155580}
   m_Layer: 0
   m_Name: TriggerObject
   m_TagString: Untagged
@@ -26,9 +28,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3443967106304908208}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.48, y: 0.82, z: 16.82}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -73,3 +75,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
+--- !u!114 &8940664975644775376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3443967106304908208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 576ef2c2c23b8ac4b8ceb9cd3ff09373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 0}
+  sentence: 
+  textSpeed: 0.03
+  dialogBox: {fileID: 0}
+  dialogueTime: 4
+--- !u!114 &8917599994250155580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3443967106304908208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37944e46c7405b54c9647f5f0abaa1ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeGameObject: {fileID: 0}
+  active: 0
