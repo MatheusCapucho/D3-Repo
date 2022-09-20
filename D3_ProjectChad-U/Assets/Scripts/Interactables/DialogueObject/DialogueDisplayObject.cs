@@ -19,7 +19,6 @@ public class DialogueDisplayObject : InteractableBase
     private int index;
 
     private InputManager inputManager;
-    private Cinemachine camManager;
 
     //armazena o objeto de dialogo
     [SerializeField] private GameObject dialogBox;
@@ -86,7 +85,6 @@ public class DialogueDisplayObject : InteractableBase
     void Start()
     {
         inputManager = InputManager.Instance;
-        camManager = Cinemachine.Instance;
         dialogBox = GameObject.Find("DialogBox");
         
         dialogBox.SetActive(false);  
