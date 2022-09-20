@@ -42,6 +42,7 @@ public class InputManager : MonoBehaviour
     public bool MouseClicked() => playerInput.Player.Click.triggered;
     public bool RestartScene() => playerInput.Player.RestartScene.triggered;
     public bool NextScene() => playerInput.Player.NextScene.triggered;
+    public bool PauseGame() => playerInput.Player.Pause.triggered;
 
     #endregion
 

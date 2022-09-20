@@ -18,14 +18,7 @@ public class TriggerSprite : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             sprite.enabled = !sprite.enabled;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            sprite.enabled = !sprite.enabled;
+            Destroy(this, 0.1f);
         }
     }
 

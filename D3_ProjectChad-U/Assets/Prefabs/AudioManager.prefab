@@ -99,3 +99,9 @@ MonoBehaviour:
     volume: 0.7
     pitch: 1
     loop: 1
+  - audioSource: {fileID: 0}
+    name: Radio
+    clip: {fileID: 8300000, guid: cbea941dfc4809147bb5604d94a50cdb, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
