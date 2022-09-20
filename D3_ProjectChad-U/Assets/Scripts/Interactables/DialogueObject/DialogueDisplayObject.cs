@@ -5,7 +5,8 @@ using TMPro;
 
 public class DialogueDisplayObject : InteractableBase
 {
-   private TextMeshProUGUI textComponent;
+    //Referencia a UI do dialogo
+    [SerializeField] private TextMeshProUGUI textComponent;
 
     //aramazena as frases do dialogo
     [TextArea(5,10)] [SerializeField] private string sentence;
@@ -30,7 +31,7 @@ public class DialogueDisplayObject : InteractableBase
     {
         if (!activeDialogue)
         {
-            Debug.Log("passou 1");
+            
             StartDialogue();
         }    
     }
@@ -39,11 +40,11 @@ public class DialogueDisplayObject : InteractableBase
     public void StartDialogue()
     {
         activeDialogue = true;
-        Debug.Log("passou 2");
-        dialogBox.SetActive(true);
+       
         textComponent.text = string.Empty;
+        dialogBox.SetActive(true);
         StartCoroutine(TypeLine());
-        Debug.Log("passou 3");
+       
         Invoke("endDialogue",dialogueTime);
         
         
@@ -72,9 +73,6 @@ public class DialogueDisplayObject : InteractableBase
     void Start()
     {
         inputManager = InputManager.Instance;
-        dialogBox = GameObject.Find("DialogBox");
-        dialogBox.SetActive(false);
-        textComponent = FindObjectOfType<TextMeshProUGUI>();
     }
 
 
