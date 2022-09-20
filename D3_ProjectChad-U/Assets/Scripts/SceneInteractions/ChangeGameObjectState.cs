@@ -22,7 +22,15 @@ public class ChangeGameObjectState : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             changeGameObject.SetActive(active);
-            Destroy(this, 0.1f);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            changeGameObject.SetActive(active);
+        }
+    }
+
 }
