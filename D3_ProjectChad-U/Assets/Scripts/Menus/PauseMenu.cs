@@ -3,16 +3,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
+using UnityEngine.InputSystem;
+using UnityEngine.AI;
 
 public class PauseMenu : MonoBehaviour
 {
     private InputManager inputManager;
+
+    private bool isPaused = false;
+
+    [SerializeField]
+    private CinemachineInputProvider cip;
+    private InputActionReference iar;
+
+    [SerializeField]
+    private GameObject monster;
+
     private void Start()
     {
         inputManager = InputManager.Instance;
+        iar = cip.XYAxis;
+        monster = GameObject.FindGameObjectWithTag("Enemy");
     }
     void Update()
     {
+        if (inputManager.PauseGame())
+            Pause();
         if (inputManager.RestartScene())
             Restart();
         if (inputManager.NextScene())
@@ -32,4 +49,27 @@ public class PauseMenu : MonoBehaviour
             SceneManager.LoadScene(1+index);
 
     }
+    public void Pause()
+    {
+        if (isPaused)
+        {
+            isPaused = !isPaused;
+            inputManager.enabled = true;
+            cip.XYAxis = iar;
+            if (monster != null)
+                monster.GetComponent<NavMeshAgent>().speed = 0f;
+
+            //Open Menu
+
+
+        } else
+        {
+            isPaused = !isPaused;
+            inputManager.enabled = false;
+            cip.XYAxis = null;
+            if (monster != null)
+                monster.GetComponent<NavMeshAgent>().speed = 5f;
+        }
+    }
+
 }

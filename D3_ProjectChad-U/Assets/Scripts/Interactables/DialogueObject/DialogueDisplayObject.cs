@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using TMPro;
 
 public class DialogueDisplayObject : InteractableBase
@@ -13,18 +12,20 @@ public class DialogueDisplayObject : InteractableBase
     [TextArea(5,10)] [SerializeField] private string sentence;
 
     //define a velocidade em que o texto é digitado na tela
-    [SerializeField] private float textSpeed;
+    [SerializeField] private float textSpeed = 0.04f;
 
     //variavel para navegar
     private int index;
 
     private InputManager inputManager;
+    private PauseMenu pauseMenu;
+
 
     //armazena o objeto de dialogo
     [SerializeField] private GameObject dialogBox;
 
     //armazena o objeto de dialogo
-    [SerializeField] private float dialogueTime;
+    [SerializeField] private float dialogueTime = 5f;
 
     private bool activeDialogue = false;
 
@@ -32,7 +33,7 @@ public class DialogueDisplayObject : InteractableBase
     {
         if (!activeDialogue)
         {
-            Debug.Log("passou 1");
+            
             StartDialogue();
         }    
     }
@@ -41,31 +42,22 @@ public class DialogueDisplayObject : InteractableBase
     public void StartDialogue()
     {
         activeDialogue = true;
-        Debug.Log("passou 2");
+        pauseMenu.Pause();
+       
         textComponent.text = string.Empty;
         dialogBox.SetActive(true);
         StartCoroutine(TypeLine());
-        Debug.Log("passou 3");
-        Time.timeScale = 0;
-        inputManager.enabled = false;
-        StartCoroutine(endDialogueDelay(endDialogue));
-        
+       
+        Invoke("endDialogue",dialogueTime);
         
         
     }
 
-    public IEnumerator endDialogueDelay(UnityAction action)
+    public void endDialogue()
     {
-        yield return new WaitForSecondsRealtime(dialogueTime);
-        action.Invoke();
-        yield break;
-    }
-
-    public void endDialogue(){
-        Time.timeScale = 1;
-        inputManager.enabled = true;
         dialogBox.SetActive(false);
         activeDialogue = false;
+        pauseMenu.Pause();
     }
 
 
@@ -74,7 +66,7 @@ public class DialogueDisplayObject : InteractableBase
         foreach (char c in sentence.ToCharArray())
         {
             textComponent.text += c;
-            yield return new  WaitForSecondsRealtime(textSpeed);
+            yield return new WaitForSeconds(textSpeed);
         }
         
     }
@@ -84,10 +76,19 @@ public class DialogueDisplayObject : InteractableBase
     // Start is called before the first frame update
     void Start()
     {
+        if (sentence == string.Empty)
+            Destroy(this);
         inputManager = InputManager.Instance;
-        dialogBox = GameObject.Find("DialogBox");
-        
-        dialogBox.SetActive(false);  
+        pauseMenu = GameObject.Find("PauseMenu").GetComponent<PauseMenu>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            StartDialogue();
+            Destroy(this, dialogueTime + 0.2f);
+        }
     }
 
 
