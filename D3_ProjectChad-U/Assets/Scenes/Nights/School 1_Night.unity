@@ -948,6 +948,8 @@ RectTransform:
   - {fileID: 651414035}
   - {fileID: 945776584}
   - {fileID: 559903095}
+  - {fileID: 954440563}
+  - {fileID: 1389556638}
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12855,7 +12857,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14171,6 +14173,103 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
   m_PrefabInstance: {fileID: 945776583}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &954440562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 42171417}
+    m_Modifications:
+    - target: {fileID: 3443967106304908173, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: soundName
+      value: Telepathy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908208, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_Name
+      value: Dialog7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15.6614485
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.7418275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.0995827
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1561.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -622.0129
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 408.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940664975644775376, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: sentence
+      value: '"The flame is part of the Father.
+
+        If his child manages to
+        destroy it, the chains that bound him to you shall wither and frail"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940664975644775376, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 629172625}
+    - target: {fileID: 8940664975644775376, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: dialogueTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940664975644775376, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: textComponent
+      value: 
+      objectReference: {fileID: 886752945}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+--- !u!4 &954440563 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+  m_PrefabInstance: {fileID: 954440562}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &976790039
 PrefabInstance:
@@ -19933,6 +20032,103 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4558593196022300, guid: 991e8973513e2ad408232c1afeb3a9df, type: 3}
   m_PrefabInstance: {fileID: 1376759739}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1389556637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 42171417}
+    m_Modifications:
+    - target: {fileID: 3443967106304908173, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: soundName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908208, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_Name
+      value: Dialog8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15.6614485
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4.7418275
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.0995827
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1679.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -622.0129
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 609.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940664975644775376, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: sentence
+      value: 'This is my room.
+
+        Maybe I can use the cameras and the door
+        system to buy me some time...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940664975644775376, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 629172625}
+    - target: {fileID: 8940664975644775376, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: dialogueTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8940664975644775376, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+      propertyPath: textComponent
+      value: 
+      objectReference: {fileID: 886752945}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+--- !u!4 &1389556638 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3443967106304908209, guid: 591bc8a810845414d9212d148fdc0df0, type: 3}
+  m_PrefabInstance: {fileID: 1389556637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1397909218
 GameObject:
   m_ObjectHideFlags: 0
@@ -24580,7 +24776,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.12
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
