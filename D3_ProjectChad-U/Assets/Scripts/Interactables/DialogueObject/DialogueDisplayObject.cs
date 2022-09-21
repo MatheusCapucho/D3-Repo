@@ -18,6 +18,8 @@ public class DialogueDisplayObject : InteractableBase
     private int index;
 
     private InputManager inputManager;
+    private PauseMenu pauseMenu;
+
 
     //armazena o objeto de dialogo
     [SerializeField] private GameObject dialogBox;
@@ -40,6 +42,7 @@ public class DialogueDisplayObject : InteractableBase
     public void StartDialogue()
     {
         activeDialogue = true;
+        pauseMenu.Pause();
        
         textComponent.text = string.Empty;
         dialogBox.SetActive(true);
@@ -54,6 +57,7 @@ public class DialogueDisplayObject : InteractableBase
     {
         dialogBox.SetActive(false);
         activeDialogue = false;
+        pauseMenu.Pause();
     }
 
 
@@ -75,6 +79,7 @@ public class DialogueDisplayObject : InteractableBase
         if (sentence == string.Empty)
             Destroy(this);
         inputManager = InputManager.Instance;
+        pauseMenu = GameObject.Find("PauseMenu").GetComponent<PauseMenu>();
     }
 
     private void OnTriggerEnter(Collider other)
