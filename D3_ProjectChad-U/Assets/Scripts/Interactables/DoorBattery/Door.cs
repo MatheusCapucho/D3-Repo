@@ -23,13 +23,13 @@ public class Door : MonoBehaviour
     private void OpenDoor()
     {
         Debug.Log("Abri " + gameObject.name);
-        transform.position += new Vector3(0, 3, 0);
+        transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y + 90f, transform.rotation.z);
     }
 
     private void CloseDoor()
     {
         Debug.Log("Fechei " + gameObject.name);
-        transform.position += new Vector3(0, -3, 0);
+        transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y - 90f, transform.rotation.z);
     }
 
     
