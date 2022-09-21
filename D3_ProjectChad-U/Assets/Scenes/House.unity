@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43882057, g: 0.48699844, b: 0.5672642, a: 1}
+  m_IndirectSpecularColor: {r: 0.43882105, g: 0.4869991, b: 0.5672648, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2145,6 +2145,67 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8774980583847936708, guid: 262ac962ee4e6f04a86552869dbb8e63, type: 3}
+--- !u!1001 &869864567
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5934769342438590688, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: cip
+      value: 
+      objectReference: {fileID: 1228771839}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.433556
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5773757
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.31479
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590689, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5934769342438590690, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
+      propertyPath: m_Name
+      value: PauseMenu
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb7eff4f216db2a4db84e55b9b706afa, type: 3}
 --- !u!64 &871147704
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3182,6 +3243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cip: {fileID: 0}
+  monster: {fileID: 0}
 --- !u!114 &1214053240
 MonoBehaviour:
   m_ObjectHideFlags: 0
