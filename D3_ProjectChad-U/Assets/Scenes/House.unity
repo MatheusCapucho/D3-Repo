@@ -17936,7 +17936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5704264684207a541aeca74ea379c49e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: School
+  sceneName: School 1_Night
 --- !u!23 &6306962790244536839
 MeshRenderer:
   m_ObjectHideFlags: 0
