@@ -59,6 +59,9 @@ public class PauseMenu : MonoBehaviour
             if (monster != null)
                 monster.GetComponent<NavMeshAgent>().speed = 0f;
 
+            //Open Menu
+
+
         } else
         {
             isPaused = !isPaused;

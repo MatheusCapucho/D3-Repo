@@ -20,16 +20,18 @@ public class InputManager : MonoBehaviour
             _instance = this;
 
         playerInput = new PlayerInput();
+        playerInput.Pause.Enable();
     }
 
     private void OnEnable()
     {
-        playerInput.Enable();
+        playerInput.Player.Enable();
+       
     }
 
     private void OnDisable()
     {
-        playerInput.Disable();
+        playerInput.Player.Disable();
     }
 
     #endregion
@@ -42,7 +44,7 @@ public class InputManager : MonoBehaviour
     public bool MouseClicked() => playerInput.Player.Click.triggered;
     public bool RestartScene() => playerInput.Player.RestartScene.triggered;
     public bool NextScene() => playerInput.Player.NextScene.triggered;
-    public bool PauseGame() => playerInput.Player.Pause.triggered;
+    public bool PauseGame() => playerInput.Pause.PauseAction.triggered;
 
     #endregion
 
