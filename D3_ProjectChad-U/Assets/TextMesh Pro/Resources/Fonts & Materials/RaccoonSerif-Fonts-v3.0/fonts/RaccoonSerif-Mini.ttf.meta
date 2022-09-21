@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f5f10e623a46b643ba7d6b620757c2f
+guid: b3ee2e24ddb7f4d4f801eb1895552944
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,13 +11,9 @@ TrueTypeFontImporter:
   fontNames:
   - RaccoonSerif
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 3c4e45f6f1cea7a428f5e27919d12fbf, type: 3}
-  - {fileID: 12800000, guid: 2e267bb4c28614d4f8d4632a8123f776, type: 3}
   - {fileID: 12800000, guid: 2ee68c9ff5b0f234c95bc331f41cf94c, type: 3}
-  - {fileID: 12800000, guid: bced1be87f706b447b7f75c4a0444e13, type: 3}
   - {fileID: 12800000, guid: f131a3321b51bd744beb08f883174f2f, type: 3}
   - {fileID: 12800000, guid: 1396e10f2d455544bb8632fb72746009, type: 3}
-  - {fileID: 12800000, guid: 30a875b291fab204e9bf4573ebbb3bee, type: 3}
   - {fileID: 12800000, guid: 7c703106b3fb6be4abc3ce9663e06aa7, type: 3}
   - {fileID: 12800000, guid: c9e49611f0a8355439b9d8aab33fa0ae, type: 3}
   customCharacters: 

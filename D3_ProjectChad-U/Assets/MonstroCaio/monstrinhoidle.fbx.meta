@@ -1,25 +1,12 @@
 fileFormatVersion: 2
-guid: 833d06717aa8c4343911fe78235687b4
+guid: 5cb6eb471d3caf24c8329534c0213a30
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
       74: -887982601649841707
-    second: Idle
-  - first:
-      74: 5522812681064789136
-    second: Run
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: pele
-    second: {fileID: 2100000, guid: 57115d6bc78b6d344aba40aa3498f74d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: sorriso
-    second: {fileID: 2100000, guid: 90fc44323e0ebdd44b87847d5e19b8b9, type: 2}
+    second: metarig|metarigAction
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,36 +34,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Idle
-      takeName: metarig|metarigAction
-      internalID: 0
-      firstFrame: 1
-      lastFrame: 90
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -142,7 +100,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
