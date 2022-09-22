@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Battery
   - Classroom
+  - Enemy
   layers:
   - Default
   - TransparentFX
