@@ -105,3 +105,9 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     loop: 0
+  - audioSource: {fileID: 0}
+    name: Telepathy
+    clip: {fileID: 8300000, guid: 4435677566a817d489a7f86332e45f75, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
