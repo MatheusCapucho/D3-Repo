@@ -26,8 +26,9 @@ public class SurvivalTime : MonoBehaviour
 
     private void OnDisable()
     {
-        monster.SetActive(false);
-        textTimerComponent.gameObject.SetActive(false);
+        if (monster != null)
+            monster.SetActive(false);
+            
     }
 
     private void FixedUpdate()
@@ -39,6 +40,7 @@ public class SurvivalTime : MonoBehaviour
            
             if (IsTimerComplete())
             {
+                textTimerComponent.gameObject.SetActive(false);
                 gameObject.SetActive(false);
             }
         }
