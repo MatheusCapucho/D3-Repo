@@ -80,15 +80,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Pause"",
-                    ""type"": ""Button"",
-                    ""id"": ""e9577879-f901-4cb5-b6ee-70000ec39c3e"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -201,15 +192,32 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""action"": ""NextScene"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
+                }
+            ]
+        },
+        {
+            ""name"": ""Pause"",
+            ""id"": ""c2d9bcd1-6721-4caa-83ed-d2d3ff8f63c4"",
+            ""actions"": [
+                {
+                    ""name"": ""PauseAction"",
+                    ""type"": ""Button"",
+                    ""id"": ""b36a7b60-51eb-42a2-9bed-0556a717ded8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""41bf02df-b530-42c3-b91d-569b4263fd12"",
+                    ""id"": ""76ca9fd1-0933-4202-874a-a8b1a7b9ad19"",
                     ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Pause"",
+                    ""action"": ""PauseAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -226,7 +234,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
         m_Player_RestartScene = m_Player.FindAction("RestartScene", throwIfNotFound: true);
         m_Player_NextScene = m_Player.FindAction("NextScene", throwIfNotFound: true);
-        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        // Pause
+        m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
+        m_Pause_PauseAction = m_Pause.FindAction("PauseAction", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -292,7 +302,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_MousePosition;
     private readonly InputAction m_Player_RestartScene;
     private readonly InputAction m_Player_NextScene;
-    private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -303,7 +312,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
         public InputAction @RestartScene => m_Wrapper.m_Player_RestartScene;
         public InputAction @NextScene => m_Wrapper.m_Player_NextScene;
-        public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -331,9 +339,6 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @NextScene.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextScene;
                 @NextScene.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextScene;
                 @NextScene.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNextScene;
-                @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -356,13 +361,43 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @NextScene.started += instance.OnNextScene;
                 @NextScene.performed += instance.OnNextScene;
                 @NextScene.canceled += instance.OnNextScene;
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
             }
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Pause
+    private readonly InputActionMap m_Pause;
+    private IPauseActions m_PauseActionsCallbackInterface;
+    private readonly InputAction m_Pause_PauseAction;
+    public struct PauseActions
+    {
+        private @PlayerInput m_Wrapper;
+        public PauseActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @PauseAction => m_Wrapper.m_Pause_PauseAction;
+        public InputActionMap Get() { return m_Wrapper.m_Pause; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PauseActions set) { return set.Get(); }
+        public void SetCallbacks(IPauseActions instance)
+        {
+            if (m_Wrapper.m_PauseActionsCallbackInterface != null)
+            {
+                @PauseAction.started -= m_Wrapper.m_PauseActionsCallbackInterface.OnPauseAction;
+                @PauseAction.performed -= m_Wrapper.m_PauseActionsCallbackInterface.OnPauseAction;
+                @PauseAction.canceled -= m_Wrapper.m_PauseActionsCallbackInterface.OnPauseAction;
+            }
+            m_Wrapper.m_PauseActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @PauseAction.started += instance.OnPauseAction;
+                @PauseAction.performed += instance.OnPauseAction;
+                @PauseAction.canceled += instance.OnPauseAction;
+            }
+        }
+    }
+    public PauseActions @Pause => new PauseActions(this);
     public interface IPlayerActions
     {
         void OnMovement(InputAction.CallbackContext context);
@@ -371,6 +406,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnMousePosition(InputAction.CallbackContext context);
         void OnRestartScene(InputAction.CallbackContext context);
         void OnNextScene(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
+    }
+    public interface IPauseActions
+    {
+        void OnPauseAction(InputAction.CallbackContext context);
     }
 }

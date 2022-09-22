@@ -76,12 +76,6 @@ MonoBehaviour:
     pitch: 1
     loop: 1
   - audioSource: {fileID: 0}
-    name: Horror
-    clip: {fileID: 8300000, guid: fc81b474e78b1af468968524c25c12da, type: 3}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-  - audioSource: {fileID: 0}
     name: Door
     clip: {fileID: 8300000, guid: dd2629853b01ef04986d9b68b00eb024, type: 3}
     volume: 0.5
@@ -99,3 +93,21 @@ MonoBehaviour:
     volume: 0.7
     pitch: 1
     loop: 1
+  - audioSource: {fileID: 0}
+    name: Radio
+    clip: {fileID: 8300000, guid: cbea941dfc4809147bb5604d94a50cdb, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: Horror
+    clip: {fileID: 8300000, guid: b81e47706bf98f04d95c6a011efb9458, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+  - audioSource: {fileID: 0}
+    name: Telepathy
+    clip: {fileID: 8300000, guid: 4435677566a817d489a7f86332e45f75, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0

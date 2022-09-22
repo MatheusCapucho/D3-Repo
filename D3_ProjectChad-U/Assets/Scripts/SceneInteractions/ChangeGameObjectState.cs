@@ -9,6 +9,8 @@ public class ChangeGameObjectState : MonoBehaviour
 
     [SerializeField]
     private bool active = false;
+    [SerializeField]
+    private float timeToResolve = 0.5f;
 
     private void Start()
     {
@@ -21,7 +23,7 @@ public class ChangeGameObjectState : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            changeGameObject.SetActive(active);
+            StartCoroutine(ResolveAfterSeconds(timeToResolve));
         }
     }
 
@@ -29,8 +31,17 @@ public class ChangeGameObjectState : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            changeGameObject.SetActive(active);
+            StartCoroutine(ResolveAfterSeconds(timeToResolve));
         }
     }
+
+    IEnumerator ResolveAfterSeconds(float time)
+    {
+        yield return new WaitForSeconds(time);
+
+        changeGameObject.SetActive(active);
+
+    }
+
 
 }

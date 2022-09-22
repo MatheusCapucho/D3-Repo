@@ -5,9 +5,14 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     private bool doorIsOpen = true;
+
+    private GameObject openedDoor;
+    private GameObject closedDoor;
+
     void Start()
     {
-        
+        openedDoor = transform.GetChild(0).gameObject;
+        closedDoor = transform.GetChild(1).gameObject;
     }
 
     public void ResolveDoor()
@@ -23,13 +28,15 @@ public class Door : MonoBehaviour
     private void OpenDoor()
     {
         Debug.Log("Abri " + gameObject.name);
-        transform.position += new Vector3(0, 3, 0);
+        closedDoor.SetActive(false);
+        openedDoor.SetActive(true);
     }
 
     private void CloseDoor()
     {
         Debug.Log("Fechei " + gameObject.name);
-        transform.position += new Vector3(0, -3, 0);
+        closedDoor.SetActive(true);
+        openedDoor.SetActive(false);
     }
 
     
