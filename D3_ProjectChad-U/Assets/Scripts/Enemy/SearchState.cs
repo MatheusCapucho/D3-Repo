@@ -59,7 +59,7 @@ public class SearchState : BaseState
     private bool ReachedTarget()
     {
         var distance = Vector3.Distance(transform.position, enemy.Target.position);
-        if (distance < 0.8f)
+        if (distance < 5f)
         {
             visited[_currentTargetID] = true;
             if (classroomHolder.GetNPC(_currentTargetID))
